@@ -424,3 +424,86 @@ footer{margin-top:0}
   }
 }
 
+
+/* MOBILE NAVIGATION FIX */
+@media(max-width:820px){
+  .navlinks.open{
+    display:flex !important;
+    position:absolute;
+    top:78px;
+    left:15px;
+    right:15px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px;
+    background:rgba(255,255,255,.98);
+    border:1px solid #e5ebf4;
+    border-radius:16px;
+    box-shadow:0 18px 45px rgba(8,38,83,.18);
+    z-index:100;
+  }
+  .navlinks.open a{
+    display:block;
+    padding:14px 16px;
+    border-radius:10px;
+  }
+  .navlinks.open a:hover,.navlinks.open a.active{
+    background:#eef5ff;
+    color:#1769ff;
+  }
+}
+
+/* MOBILE MENU BASE STATE
+   The mobile menu must never render as a second desktop navigation. */
+.mobile-menu {
+  display: none !important;
+}
+
+/* FINAL NAVIGATION FIX
+   Keep Home visible on desktop and inside the mobile menu on every page. */
+.navlinks a.home-link {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.mobile-menu a.home-link {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .navlinks {
+    display: none !important;
+  }
+
+  .menu {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+  }
+
+  .mobile-menu.open {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .mobile-menu a {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
