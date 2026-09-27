@@ -1,7 +1,4 @@
-# Honor Pact Final Website
+# Honor Pact Website - Final Navigation Fix
 
-Final static-globe version.
-
-The homepage keeps the cinematic hero artwork with the static digital globe and removes
-the animated globe overlay. The final homepage hierarchy is:
-Hero → Technology. Talent. Growth. → supporting statement → three solution cards.
+Desktop and mobile navigation are unified across all pages.
+Home is explicitly present on every internal page and in every mobile menu.
